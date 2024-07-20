@@ -35,10 +35,10 @@ WeatherApp is a JavaScript-based application designed to provide users with curr
 ### Built With
 
 * [![JavaScript][JavaScript.com]][JavaScript-url]
+* [![jQuery][jQuery.com]][jQuery-url]
 * [![HTML5][HTML5.com]][HTML5-url]
 * [![CSS3][CSS3.com]][CSS3-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
-* [![jQuery][jQuery.com]][jQuery-url]
 
 
 <!-- GETTING STARTED -->
