@@ -60,7 +60,7 @@ nav small {
 }
 
 .nav-item a {
-    color: white !important;
+    color: white;
     padding: 5px 25px !important;
     border: 2px solid transparent;
     border-radius: 30px;
@@ -71,10 +71,6 @@ nav small {
 .nav-item a:hover,
 .active {
     border-color: #009ad8 !important;
-    color: #009ad8 !important;
-}
-
-.active a:active {
     color: #009ad8 !important;
 }
 
