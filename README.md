@@ -81,7 +81,7 @@ Contributions are welcome! If you have suggestions for improvements or new featu
 
 Mai Allam - [@maiallam57](https://twitter.com/maiallam57) - maimallam57@gmail.com
 
-Project Demo: [https://maiallam57.github.io/GameOOP/](https://maiallam57.github.io/GameOOP/)
+Project Demo: [https://maiallam57.github.io/weatherApp/](https://maiallam57.github.io/weatherApp/)
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
