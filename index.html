@@ -1,209 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link
-            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-            rel="stylesheet">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/all.min.css">
-        <link rel="stylesheet" href="css/main.css">
-        <title>Weather | Mai Allam</title>
-    </head>
-    <body>
 
-        <!--* Navbar -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Weather | Mai Allam</title>
+</head>
 
-        <nav class="navbar navbar-expand-lg">
-            <div class="container d-flex">
-                <a class="navbar-brand d-flex" href="#">
-                    <img src="images/logo2x.png" alt="weather logo"
-                        class="w-25 h-25">
-                    <div class="description ms-3">
-                        <h1 class="m-0 text-white">Weather</h1>
-                        <small class=" text-white">tagline goes here</small>
+<body>
+
+    <!--* Navbar -->
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container d-flex">
+            <a class="navbar-brand d-flex" href="#">
+                <img src="images/logo2x.png" alt="weather logo" class="w-25 h-25">
+                <div class="description ms-3">
+                    <h1 class="m-0 text-white">Weather</h1>
+                    <small class=" text-white">tagline goes here</small>
+                </div>
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
+                aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse flex-grow-0" id="navbarText">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item pe-2">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link" href="#">News</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link" href="#">Live Cameras</a>
+                    </li>
+                    <li class="nav-item pe-2">
+                        <a class="nav-link" href="#">Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!--* main site -->
+    <section>
+        <div class="position-relative pb-5">
+            <img src="images/banner.png" alt="banner image" class="w-100">
+
+            <!-- Search Input -->
+            <div class="container position-absolute top-15 start-0 end-0">
+                <form class="position-relative">
+                    <input type="text" class="form-control p-3 px-4 text-white no-focus" id="searchInput"
+                        placeholder="Find your Location...">
+                    <button type="submit" id="searchBtn"
+                        class="btn btn-info px-5 text-white position-absolute top-0 bottom-0 end-0 m-2">Find</button>
+                </form>
+            </div>
+
+            <!-- Weather cards-->
+            <div class="container position-relative start-0 end-0 mb-5">
+                <div class="card-group" id="weatherCards">
+
+                    <div class="card bg-secondary-color ">
+                        <div class="card-header d-flex justify-content-between bg-fade">
+                            <p class="m-0">Day</p>
+                            <p class="m-0">Date</p>
+                        </div>
+                        <div class="card-body p-4">
+                            <p class="card-text">Cairo</p>
+                            <h3 class="card-title">35.2<sup>o</sup>c</h3>
+                            <div class="card-icon">
+                                <img src="images/113.png" alt="weather icon" class="w-25">
+                            </div>
+
+                            <div class="card-text">
+                                <p class="d-block text-main-color my-3">Sunny
+                                </p>
+                                <span class="me-3">
+                                    <img src="images/icon-umberella.png" alt="icon" width="21" height="21"
+                                        class="me-2">20%
+                                </span>
+                                <span class="me-3">
+                                    <img src="images/icon-wind.png" alt="icon" width="21" height="21"
+                                        class="me-2">18km/h
+                                </span>
+                                <span class="me-3">
+                                    <img src="images/icon-compass.png" alt="icon" width="21" height="21"
+                                        class="me-2">East
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                </a>
 
-                <button class="navbar-toggler" type="button"
-                    data-bs-toggle="collapse" data-bs-target="#navbarText"
-                    aria-controls="navbarText" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse flex-grow-0"
-                    id="navbarText">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item pe-2">
-                            <a class="nav-link active" aria-current="page"
-                                href="#">Home</a>
-                        </li>
-                        <li class="nav-item pe-2">
-                            <a class="nav-link" href="#">News</a>
-                        </li>
-                        <li class="nav-item pe-2">
-                            <a class="nav-link" href="#">Live Cameras</a>
-                        </li>
-                        <li class="nav-item pe-2">
-                            <a class="nav-link" href="#">Photos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="contact.html">Contact</a>
-                        </li>
-                    </ul>
+                    <div class="card bg-main-color text-center">
+                        <div class="card-header text-center bg-fade">
+                            <p class="m-0">Day</p>
+                        </div>
+
+                        <div class="card-body p-4">
+                            <div class="card-icon">
+                                <img src="images/113.png" alt="weather icon" class="w-15 my-4">
+                            </div>
+                            <h4 class="card-title">35.2<sup>o</sup>c</h4>
+                            <h6 class="card-title">35.2<sup>o</sup>c</h6>
+                            <div class="card-text">
+                                <p class="d-block text-main-color my-4">Sunny</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card bg-secondary-color text-center">
+                        <div class="card-header text-center bg-fade">
+                            <p class="m-0">Day</p>
+                        </div>
+
+                        <div class="card-body p-4">
+                            <div class="card-icon">
+                                <img src="images/113.png" alt="weather icon" class="w-15 my-4">
+                            </div>
+                            <h4 class="card-title">35.2<sup>o</sup>c</h4>
+                            <h6 class="card-title">35.2<sup>o</sup>c</h6>
+                            <div class="card-text">
+                                <p class="d-block text-main-color my-4">Sunny</p>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
             </div>
-        </nav>
+        </div>
+    </section>
 
-        <!--* main site -->
-        <section>
-            <div class="position-relative pb-5">
-                <img src="images/banner.png" alt="banner image" class="w-100">
-
-                <!-- Search Input -->
-                <div class="container position-absolute top-15 start-0 end-0">
+    <!--* footer site -->
+    <section class="bg-secondary-color py-5">
+        <!-- Search Input -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 mb-5">
                     <form class="position-relative">
-                        <input type="text"
-                            class="form-control p-3 px-4 text-white no-focus"
-                            id="searchInput"
-                            placeholder="Find your Location...">
-                        <button type="submit" id="searchBtn"
-                            class="btn btn-info px-5 text-white position-absolute top-0 bottom-0 end-0 m-2">Find</button>
+                        <input type="text" class="form-control p-3 px-4 text-white no-focus" id="subscribeInput"
+                            placeholder="Enter your email to subscribe...">
+                        <button type="submit" id="subscribeBtn"
+                            class="btn btn-info px-5 text-white position-absolute top-0 bottom-0 end-0 m-2">Subscribe</button>
                     </form>
                 </div>
-
-                <!-- Weather cards-->
-                <div
-                    class="container position-relative start-0 end-0 mb-5">
-                    <div class="card-group" id="weatherCards">
-
-                        <div class="card bg-secondary-color ">
-                            <div
-                                class="card-header d-flex justify-content-between bg-fade">
-                                <p class="m-0">Day</p>
-                                <p class="m-0">Date</p>
-                            </div>
-                            <div class="card-body p-4">
-                                <p class="card-text">Cairo</p>
-                                <h3 class="card-title">35.2<sup>o</sup>c</h3>
-                                <div class="card-icon">
-                                    <img src="images/113.png"
-                                        alt="weather icon"
-                                        class="w-25">
-                                </div>
-
-                                <div class="card-text">
-                                    <p
-                                        class="d-block text-main-color my-3">Sunny
-                                    </p>
-                                    <span class="me-3">
-                                        <img
-                                            src="images/icon-umberella.png"
-                                            alt="icon" width="21" height="21"
-                                            class="me-2">20%
-                                    </span>
-                                    <span class="me-3">
-                                        <img
-                                            src="images/icon-wind.png"
-                                            alt="icon" width="21" height="21"
-                                            class="me-2">18km/h
-                                    </span>
-                                    <span class="me-3">
-                                        <img
-                                            src="images/icon-compass.png"
-                                            alt="icon" width="21" height="21"
-                                            class="me-2">East
-                                    </span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card bg-main-color text-center">
-                            <div class="card-header text-center bg-fade">
-                                <p class="m-0">Day</p>
-                            </div>
-
-                            <div class="card-body p-4">
-                                <div class="card-icon">
-                                    <img src="images/113.png"
-                                        alt="weather icon"
-                                        class="w-15 my-4">
-                                </div>
-                                <h4 class="card-title">35.2<sup>o</sup>c</h4>
-                                <h6 class="card-title">35.2<sup>o</sup>c</h6>
-                                <div class="card-text">
-                                    <p
-                                        class="d-block text-main-color my-4">Sunny</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="card bg-secondary-color text-center">
-                            <div class="card-header text-center bg-fade">
-                                <p class="m-0">Day</p>
-                            </div>
-
-                            <div class="card-body p-4">
-                                <div class="card-icon">
-                                    <img src="images/113.png"
-                                        alt="weather icon"
-                                        class="w-15 my-4">
-                                </div>
-                                <h4 class="card-title">35.2<sup>o</sup>c</h4>
-                                <h6 class="card-title">35.2<sup>o</sup>c</h6>
-                                <div class="card-text">
-                                    <p
-                                        class="d-block text-main-color my-4">Sunny</p>
-                                </div>
-                            </div>
-                        </div>
-
+                <div class="col-md-3 offset-md-1 mb-5">
+                    <div class="d-flex justify-content-center gap-3 pt-1 text-center">
+                        <a href="#" class="rounded-circle bg-main-color text-main-color icon"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="rounded-circle bg-main-color text-main-color icon"><i
+                                class="fa-brands fa-twitter"></i></a>
+                        <a href="#" class="rounded-circle bg-main-color text-main-color icon"><i
+                                class="fa-brands fa-google-plus"></i></a>
+                        <a href="#" class="rounded-circle bg-main-color text-main-color icon"><i
+                                class="fa-brands fa-pinterest"></i></a>
                     </div>
                 </div>
+
+                <p class>Copyright 2014 Company name. Designed by Mai Allam.
+                    All rights reserved</p>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!--* footer site -->
-        <section class="bg-secondary-color py-5">
-            <!-- Search Input -->
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-8 mb-5">
-                        <form class="position-relative">
-                            <input type="text"
-                                class="form-control p-3 px-4 text-white no-focus"
-                                id="subscribeInput"
-                                placeholder="Enter your email to subscribe...">
-                            <button type="submit" id="subscribeBtn"
-                                class="btn btn-info px-5 text-white position-absolute top-0 bottom-0 end-0 m-2">Subscribe</button>
-                        </form>
-                    </div>
-                    <div class="col-md-3 offset-md-1 mb-5">
-                        <div
-                            class="d-flex justify-content-center gap-3 pt-1 text-center">
-                            <a href="#"
-                                class="rounded-circle bg-main-color text-main-color icon"><i
-                                    class="fa-brands fa-facebook-f"></i></a>
-                            <a href="#"
-                                class="rounded-circle bg-main-color text-main-color icon"><i
-                                    class="fa-brands fa-twitter"></i></a>
-                            <a href="#"
-                                class="rounded-circle bg-main-color text-main-color icon"><i
-                                    class="fa-brands fa-google-plus"></i></a>
-                            <a href="#"
-                                class="rounded-circle bg-main-color text-main-color icon"><i
-                                    class="fa-brands fa-pinterest"></i></a>
-                        </div>
-                    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
 
-                    <p class>Copyright 2014 Company name. Designed by Mai Allam.
-                        All rights reserved</p>
-                </div>
-            </div>
-        </section>
-
-        <script src="js/bootstrap.bundle.min.js"></script>
-        <script src="js/script.js"></script>
-    </body>
 </html>

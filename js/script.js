@@ -15,16 +15,6 @@ const options = {
     maximumAge: 0,
 };
 
-for (let index = 0; index < navAnchors.length; index++) {
-    navAnchors[index].addEventListener('click', function () {
-        if (navAnchors[index].classList.contains("active")) {
-            navAnchors[index].classList.remove("active")
-        } else {
-            navAnchors[index].classList.add("active")
-        }
-    })
-}
-
 async function getCurrentWeather(loc) {
     try {
         await getLocation().then(location => {
@@ -45,7 +35,14 @@ async function getCurrentWeather(loc) {
 function displayWeather(data) {
     var forecastday = data.forecast.forecastday;
     var e = new Date(data.current.last_updated.replace(" ", "T"));
-
+    if (e.getDay() == 6) {
+        var next = days[0];
+        var nextNext = days[1];
+    }
+    else {
+        var next = days[e.getDay() + 1];
+        var nextNext = days[e.getDay() + 2];
+    }
     weatherCards.innerHTML = `
     <div class="card bg-secondary-color">
         <div
@@ -90,7 +87,7 @@ function displayWeather(data) {
 
     <div class="card bg-main-color text-center">
         <div class="card-header text-center bg-fade">
-            <p class="m-0">${days[e.getDay() + 1]}</p>
+            <p class="m-0">${next}</p>
         </div>
 
         <div class="card-body p-4">
@@ -110,7 +107,7 @@ function displayWeather(data) {
 
     <div class="card bg-secondary-color text-center">
         <div class="card-header text-center bg-fade">
-            <p class="m-0">${days[e.getDay() + 1]}</p>
+            <p class="m-0">${nextNext}</p>
         </div>
 
         <div class="card-body p-4">
@@ -184,5 +181,12 @@ searchBtn.addEventListener('click', function (eventInfo) {
 document.addEventListener('load', function () {
     getCurrentWeather()
 })
+
+document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener('click', function () {
+        document.querySelector("nav .active")?.classList.remove("active");
+        this.classList.add("active");
+    });
+});
 
 getCurrentWeather()

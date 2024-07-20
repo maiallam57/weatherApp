@@ -28,14 +28,13 @@ A JavaScript-based website demonstrating Object-Oriented Programming (OOP) princ
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![GameOOP Screenshot][Website-screenshot]](https://raw.githubusercontent.com/maiallam57/GameOOP/main/images/cover.png)
+[![WeatherApp Screenshot][Website-screenshot]](https://raw.githubusercontent.com/maiallam57/GameOOP/main/images/cover.png)
 
 WeatherApp is a JavaScript-based application designed to provide users with current weather information. The project showcases how to interact with an external API (OpenWeatherMap) to fetch and display data.
 
 ### Built With
 
 * [![JavaScript][JavaScript.com]][JavaScript-url]
-* [![jQuery][jQuery.com]][jQuery-url]
 * [![HTML5][HTML5.com]][HTML5-url]
 * [![CSS3][CSS3.com]][CSS3-url]
 * [![Bootstrap][Bootstrap.com]][Bootstrap-url]
@@ -94,6 +93,4 @@ Project Demo: [https://maiallam57.github.io/weatherApp/](https://maiallam57.gith
 [CSS3-url]: https://developer.mozilla.org/en-US/docs/Web/CSS
 [Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
 [Bootstrap-url]: https://getbootstrap.com/
-[jQuery.com]: https://img.shields.io/badge/jQuery-563D7C?style=for-the-badge&logo=jQuery&logoColor=white
-[jQuery-url]: https://getjQuery.com/
 [Website-screenshot]: https://raw.githubusercontent.com/maiallam57/weatherApp/main/images/cover.PNG
