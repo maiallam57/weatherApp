@@ -1,5 +1,5 @@
 <!-- PROJECT TITLE -->
-# GameOOP
+# weatherApp
 
 <!-- PROJECT DESCRIPTION -->
 A JavaScript-based website demonstrating Object-Oriented Programming (OOP) principles with interactive UI.
@@ -96,4 +96,4 @@ Project Demo: [https://maiallam57.github.io/GameOOP/](https://maiallam57.github.
 [Bootstrap-url]: https://getbootstrap.com/
 [jQuery.com]: https://img.shields.io/badge/jQuery-563D7C?style=for-the-badge&logo=jQuery&logoColor=white
 [jQuery-url]: https://getjQuery.com/
-[Website-screenshot]:https://raw.githubusercontent.com/maiallam57/weatherApp/main/images/cover.png
+[Website-screenshot]: https://raw.githubusercontent.com/maiallam57/weatherApp/main/images/cover.PNG
