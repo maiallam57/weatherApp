@@ -123,8 +123,8 @@ h3 {
 
 /* ? ============= [ Footer ] ============== */
 .icon {
-    width: 15% !important;
-    height: 15% !important;
+    width: 40px !important;
+    height: 40px !important;
     padding: 0.5rem;
     font-size: 1rem;
     transition: 0.3s ease;
